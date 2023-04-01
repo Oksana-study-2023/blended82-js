@@ -111,3 +111,75 @@
 // } else {
 //   console.log("i dont know you");
 // }
+
+//TODO:===================================
+//При завантаженні сторінки користувачеві пропонується
+//в prompt ввести число. Введення додається до значення
+//змінної total.
+//Операція введення числа триває до того часу,
+//поки користувач не натисне кнопку Cancel в prompt.
+//Після того, як користувач припинив введення натиснувши на
+//кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+//Робити перевірку,що користувач ввів саме число,
+//а не довільний набір символів, не потрібно.
+
+// let value = Number(prompt("Please enter a number"));
+// let total = 0;
+// let check = false;
+// do {
+//   if (value) {
+//     check = true;
+//     total += value;
+//     value = Number(prompt("Please enter a number"));
+//   } else {
+//     check = false;
+//     alert(`Total amount is ${total}`);
+//   }
+// } while (check);
+
+//TODO:===================================
+//Даний рядок, що складається із символів, наприклад, 'abcde'.
+// Перевірте, що першим символом цього рядка є буква 'a'.
+// Якщо це так - виведіть 'так', інакше виведіть 'ні'.
+
+// const a = "abcde";
+
+// if (a[0] === "a") {
+//   console.log("Yes");
+// } else {
+//   console.log("No");
+// }
+
+//TODO:===================================
+// Напишіть if..else, що відповідає наступному switch:
+
+// switch (browser) {
+//   case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+
+//   case 'Chrome':
+//   case 'Firefox':
+//   case 'Safari':
+//   case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+
+//   default:
+//     alert( 'We hope that this page looks ok!' );
+// }
+
+// const browser = prompt("Which browser do you use?");
+
+// if (browser === "Edge") {
+//   alert("You've got the Edge!");
+// } else if (
+//   browser === "Chrome" ||
+//   browser === "Firefox" ||
+//   browser === "Safari" ||
+//   browser === "Opera"
+// ) {
+//   alert("Okay we support these browsers too");
+// } else {
+//   alert("We hope that this page looks ok!");
+// }
