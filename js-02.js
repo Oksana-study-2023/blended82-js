@@ -40,3 +40,23 @@
 //   total += salary;
 // }
 // console.log(total);
+
+//Напишіть функцію, яка приймає два аргументи і повертає всі числа,
+   // які діляться на дільник.Перший аргумент – це масив чисел, а другий – дільник.
+
+
+function func(array, num) {
+    const newArray = [];
+
+    for (const number of array) {
+        console.log(number)
+        if (number % num === 0) {
+            newArray.push(number)
+        }
+
+    }
+    return newArray;
+}
+       
+
+console.log(func([1, 2, 3, 4, 5, 6, 7, 8], 2));
