@@ -45,7 +45,7 @@
 
 //     get resultCalc(){
 //         return this.number;
-//     }    
+//     }
 
 //     addCalc(number){
 //         return this.number = this.number + number;
@@ -77,3 +77,62 @@
 // calc.divide(-2);
 // calc.multiply(3);
 // console.log(calc.resultCalc);
+
+// Задача 3
+// // Напиши class CarsManager  який створює об'єкти
+// Для управління салону автомобілів. Використати приватну змінну cars
+// Додай методи класу:
+// getModels() - повертайте масив усіх моделей
+// changeModel(oldModelName, newModelName) - Замінює стару модель на ному
+// getTotalPrice() - отримує суму усіх автомобілів
+// getMake(make) - повертає масив виробника
+// const vehicles = [
+//   { make: "Honda", model: "CR-V", type: "suv", price: 24045 },
+//   { make: "Toyota", model: "4Runner", type: "suv", price: 34210 },
+//   { make: "Ford", model: "F-150", type: "truck", price: 27110 },
+//   { make: "Honda", model: "Accord", type: "sedan", price: 22455 },
+//   { make: "Mazda", model: "CX-9", type: "suv", price: 31520 },
+//   { make: "Toyota", model: "Sequoia", type: "suv", price: 45560 },
+//   { make: "Ford", model: "Fusion", type: "sedan", price: 22120 },
+//   { make: "Mazda", model: "Mazda 6", type: "sedan", price: 24195 },
+//   { make: "Ford", model: "Explorer", type: "suv", price: 31660 },
+//   { make: "Toyota", model: "Tacoma", type: "truck", price: 24320 },
+// ];
+
+// class CarsManager {
+//   #cars;
+//   constructor(cars = []) {
+//     this.#cars = cars;
+//   }
+//   get cars() {
+//     return this.#cars;
+//   }
+//   getModels() {
+//     return this.#cars.map((mod) => mod.model);
+//   }
+
+//   changeModel(oldModelName, newModelName) {
+//     this.#cars.forEach((car) => {
+//       if (car.model === oldModelName) {
+//         car.model = newModelName;
+//       }
+//     });
+//   }
+
+//   getTotalPrice() {
+//     return this.#cars.reduce((previousValue, car) => {
+//       return previousValue + car.price;
+//     }, 0);
+//   }
+
+//   getMake(make) {
+//     return this.#cars.filter((car) => car.make === make);
+//   }
+// }
+
+// const manager = new CarsManager(vehicles);
+// manager.changeModel("CR-V", "A-80");
+// console.log(manager.getModels());
+// // console.log(manager.cars);
+// console.log(manager.getTotalPrice());
+// console.log(manager.getMake("Toyota"));
