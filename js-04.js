@@ -36,8 +36,8 @@
 і кнопка набуває початкового вигляду.
 */
 
-const taskButton = document.querySelector("#passwordButton");
-const taskInput = document.querySelector("#passwordInput");
+// const taskButton = document.querySelector("#passwordButton");
+// const taskInput = document.querySelector("#passwordInput");
 // let flag = true;
 // let hiddenText;
 
@@ -65,3 +65,100 @@ const taskInput = document.querySelector("#passwordInput");
 //     taskButton.textContent = "Hidden";
 //   }
 // });
+
+//=====================================================
+/*
+Завдання 4
+Кнопка "Зменшити" робить квадрат менше на 10 пікселів, допопка "Збільшити" - більше на 10 пікселів.
+*/
+
+// const decBtn = document.querySelector("#decrease");
+// const incBtn = document.querySelector("#increase");
+// const box = document.querySelector("#box");
+
+// let boxH = box.getBoundingClientRect().height;
+// let boxW = box.getBoundingClientRect().width;
+
+// console.log(boxH, boxW);
+
+// decBtn.addEventListener("click", () => {
+//   boxH -= 10;
+//   boxW -= 10;
+
+//   box.style.width = `${boxW}px`;
+//   box.style.height = `${boxH}px`;
+// });
+
+// incBtn.addEventListener("click", () => {
+//   boxH += 10;
+//   boxW += 10;
+
+//   box.style.width = `${boxW}px`;
+//   box.style.height = `${boxH}px`;
+// });
+//=====================================================
+
+// Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
+// Додати класи на список eventList, на елементи eventCode та eventKey4
+
+// const eventThumb = document.querySelector(".eventThumb");
+
+// document.addEventListener("keydown", pressed);
+
+// function pressed(e) {
+//   console.log(e.key, e.code);
+
+//   const { key, code } = e;
+
+//   eventThumb.insertAdjacentHTML("beforeend", createMarkup(key, code));
+// }
+
+// function createMarkup(key, code) {
+//   return `
+//   <ul class="eventList">
+//     <li class="eventCode">${code}</li>
+//     <li class="eventKey">${key}</li>
+//   </ul>
+//   `;
+// }
+
+// Завдання 16
+//  Створіть HTML сторінку з табличкою,
+//  яка містить список продуктів.Кожен рядок у
+//  табличці повинен містити назву продукту та його ціну.
+//  При натисканні на будь - який рядок у табличці відобразіть
+//  повідомлення з назвою продукту та його ціною.
+
+
+// const table = document.querySelector("#productTable");
+// const productDetails = document.querySelector("#productDetails");
+
+// table.addEventListener('click', show);
+
+// function show(e) {
+
+//   if (e.target.tagName !== 'TD') {
+//     return;
+//   }
+
+//   const parent = e.target.parentNode.cells;
+//   const msg = `${parent[0].textContent} ${parent[1].textContent}`;
+
+//   productDetails.innerHTML = msg;
+// };
+
+// Створіть HTML сторінку з формою,
+// яка містить поле введення для введення
+// імені користувача та кнопку.При натисканні
+// на кнопку відобразіть повідомлення з привітанням з іменем користувача.
+
+// const greetingMessage = document.querySelector("#greetingMessage");
+// const greetingButton = document.querySelector("#greetingButton");
+// const input = document.querySelector("#username");
+
+// greetingButton.addEventListener('click', () => {
+//   const username = input.value;
+
+//   greetingMessage.innerHTML = `Hello ${username}`;
+// });
+

@@ -1,0 +1,23 @@
+#box {
+  width: 50px;
+  height: 50px;
+  border: 2px dashed red;
+  margin: 10px;
+}
+
+.eventList {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.eventKey {
+  color: firebrick;
+}
+
+.eventCode {
+  color: blueviolet;
+}
