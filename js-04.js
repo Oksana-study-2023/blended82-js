@@ -162,3 +162,74 @@
 //   greetingMessage.innerHTML = `Hello ${username}`;
 // });
 
+//TODO:======================
+//  Написати клас, який буде представляти зоопарк тварин.
+//  Створити загальний клас Animal для тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
+// метод для виведення списку всіх тварин у зоопарку.
+
+class Animal {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    getInfo() {
+        return `name ${this.name}, type ${this.type} `
+    }
+    getFeed() {
+        return `Feeding ${this.name} ...`
+    }
+}
+
+class Bird extends Animal {
+   
+    constructor(name, type, wingspan) {
+        super(name, type)
+        this.wingspan = wingspan;
+    }
+
+    getInfo() {
+        return `${super.getInfo()}, Wingspan: ${this.wingspan}`
+    }
+}
+
+const eagle = new Bird('jack', 'bird', 72) 
+
+class Mammal extends Animal {
+   
+    constructor(name, type, size) {
+        super(name, type)
+        this.size = size;
+    }
+
+    getInfo() {
+        return `${super.getInfo()}, Size: ${this.size}`
+    }
+}
+
+const lion = new Mammal('Simba', 'Lion', 104) 
+
+class Zoo {
+    constructor() {
+        this.animals = []; 
+    }
+    addAnimal(animal) {
+        this.animals.push(animal);
+    }
+
+    listAnimals() {
+        console.log('Zoo animals: ')
+        this.animals.forEach(animal => {
+            console.log(animal.getInfo())
+        })
+    }
+}
+const zoo = new Zoo() 
+zoo.addAnimal(lion)
+zoo.addAnimal(eagle)
+
+zoo.listAnimals()
