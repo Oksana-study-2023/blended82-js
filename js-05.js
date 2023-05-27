@@ -38,6 +38,7 @@
 //         password.removeAttribute('disabled');
 // }
 
+
 // function onLogin() {
 //     button.textContent = 'logout';
 //     email.disabled = true;
@@ -140,3 +141,55 @@
 //     createMarkup();
 //   }
 // };
+
+// ЗАДАЧА 3
+// Зробити перемикач теми. Зберігати тему у локальному сховище.
+// При перезавантаженні сторінки перевіряти сховище та ставити тему, яка там вказана.
+// Додати класи для змін тем
+
+//  <div class="checkbox-thumb">
+//       <input type="checkbox" id="checkbox" class="checkbox" />
+//       <label class="theme-toggle" for="checkbox"></label>
+//       <div class="checkbox-circle"></div>
+//     </div>
+
+const inputEl = document.querySelector('#checkbox');
+const bodyEl = document.querySelector('body');
+inputEl.addEventListener('change', onChange);
+onLoad();
+function onChange() {
+  if (inputEl.checked === true) {
+    localStorage.setItem('theme', 'dark')
+    bodyEl.classList.add('dark');
+    bodyEl.classList.remove('light');
+  }
+
+  if (inputEl.checked === false) {
+    localStorage.setItem('theme', 'light')
+    bodyEl.classList.add('light');
+    bodyEl.classList.remove('dark');
+  }
+}
+
+function onLoad() {
+  const value = localStorage.getItem('theme')
+  // if (value === 'dark') {
+  //   bodyEl.classList.add('dark');
+  //   inputEl.checked = true;
+  //   return
+  // }
+  // bodyEl.classList.add('light');
+
+  switch (value) {
+    case 'dark':
+      bodyEl.classList.add('dark');
+      inputEl.checked = true;
+      break;
+    
+    default:
+     bodyEl.classList.add('light'); 
+  }
+
+
+  
+}
