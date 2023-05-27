@@ -129,7 +129,6 @@
 //  При натисканні на будь - який рядок у табличці відобразіть
 //  повідомлення з назвою продукту та його ціною.
 
-
 // const table = document.querySelector("#productTable");
 // const productDetails = document.querySelector("#productDetails");
 
@@ -171,65 +170,72 @@
 //  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
 // метод для виведення списку всіх тварин у зоопарку.
 
-class Animal {
-    constructor(name, type) {
-        this.name = name;
-        this.type = type;
-    }
+// class Animal {
+//     constructor(name, type) {
+//         this.name = name;
+//         this.type = type;
+//     }
 
-    getInfo() {
-        return `name ${this.name}, type ${this.type} `
-    }
-    getFeed() {
-        return `Feeding ${this.name} ...`
-    }
-}
+//     getInfo() {
+//         return `name ${this.name}, type ${this.type} `
+//     }
+//     getFeed() {
+//         return `Feeding ${this.name} ...`
+//     }
+// }
 
-class Bird extends Animal {
-   
-    constructor(name, type, wingspan) {
-        super(name, type)
-        this.wingspan = wingspan;
-    }
+// class Bird extends Animal {
 
-    getInfo() {
-        return `${super.getInfo()}, Wingspan: ${this.wingspan}`
-    }
-}
+//     constructor(name, type, wingspan) {
+//         super(name, type)
+//         this.wingspan = wingspan;
+//     }
 
-const eagle = new Bird('jack', 'bird', 72) 
+//     getInfo() {
+//         return `${super.getInfo()}, Wingspan: ${this.wingspan}`
+//     }
+// }
 
-class Mammal extends Animal {
-   
-    constructor(name, type, size) {
-        super(name, type)
-        this.size = size;
-    }
+// const eagle = new Bird('jack', 'bird', 72)
 
-    getInfo() {
-        return `${super.getInfo()}, Size: ${this.size}`
-    }
-}
+// class Mammal extends Animal {
 
-const lion = new Mammal('Simba', 'Lion', 104) 
+//     constructor(name, type, size) {
+//         super(name, type)
+//         this.size = size;
+//     }
 
-class Zoo {
-    constructor() {
-        this.animals = []; 
-    }
-    addAnimal(animal) {
-        this.animals.push(animal);
-    }
+//     getInfo() {
+//         return `${super.getInfo()}, Size: ${this.size}`
+//     }
+// }
 
-    listAnimals() {
-        console.log('Zoo animals: ')
-        this.animals.forEach(animal => {
-            console.log(animal.getInfo())
-        })
-    }
-}
-const zoo = new Zoo() 
-zoo.addAnimal(lion)
-zoo.addAnimal(eagle)
+// const lion = new Mammal('Simba', 'Lion', 104)
 
-zoo.listAnimals()
+// class Zoo {
+//     constructor() {
+//         this.animals = [];
+//     }
+//     addAnimal(animal) {
+//         this.animals.push(animal);
+//     }
+
+//     listAnimals() {
+//         console.log('Zoo animals: ')
+//         this.animals.forEach(animal => {
+//             console.log(animal.getInfo())
+//         })
+//     }
+// }
+// const zoo = new Zoo()
+// zoo.addAnimal(lion)
+// zoo.addAnimal(eagle)
+
+// zoo.listAnimals()
+
+const obj = {};
+
+obj.name = "John";
+obj.age = 30;
+
+console.log(obj);
